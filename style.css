@@ -1,6 +1,6 @@
 :root {
-    --primary-color:rgb(130, 87, 18);
-    --secondary-color:#fcfcfc;
+    --primary-color:rgb(115, 78, 18);
+    --secondary-color:#ffffff;
 }
 body{
 font-family: 'Poppins', sans-serif;
@@ -34,7 +34,14 @@ font-size: 10px;
     height: 50px;
     position: absolute;
     top: 20px;
-    left: 20px;
+    left: 25px;
+}
+.header__logo img {
+    object-fit: cover;
+    border-radius: 25px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: var(--primary-color);
 }
 .header__logo:hover {
     cursor: pointer;
@@ -55,11 +62,13 @@ font-size: 10px;
     display:inline;
     font-family: 'Tinos', serif;
     margin: 10px;
-    color: var(--primary-color);
+    color: rgba(200, 129, 129);
+    transition: color 0.5s;
 }
 .header__nav ul li:hover{
     text-decoration-line: underline;
     cursor: pointer;
+    color: var(--primary-color);
 }
 .header__direct {
     position: absolute;
@@ -74,12 +83,14 @@ font-size: 10px;
 }
 /* CAROUSEL */
 .carousel{
+    /* BG-setting */
     background-color: #fcfcfc;
     background-image: url("./img/rose.png");
     background-repeat: no-repeat;
     background-attachment:local;
     background-position: 400px -250px;
-    background-size: 1000px;
+    background-size: 1000px; 
+    /* div-setting */
     width: 90%;
     height: 550px;
     margin: 0 auto;
@@ -99,29 +110,36 @@ font-size: 10px;
     border-top: 0px; */
 }
 .carousel__para{
+    /* border-style: solid; */
+    opacity: 0.6;
     position:absolute;
     width: 480px;
-    height: 400px;
+    height: 500px;
     top: 0px;
     left: 20px;
-    z-index: 1;
+    z-index: 2;
 }
 .carousel__para p{
-    opacity: 0.8;
     font-size: 160px;
     margin: 0 auto;
     line-height: 1;
     letter-spacing: -10px;
     /* GRADIENT FONT */
-    background: -webkit-linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    background: -webkit-linear-gradient(135deg, var(--primary-color) 40%, rgba(200, 129, 129, 0.694));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
-.carousel__para p:hover{
+.carousel__para:hover{
     opacity: 1;
     transition: ease-out opacity 0.3s;
 }
 .carousel__main {
+    /* background-image: url("./img/rose.png");
+    background-repeat: no-repeat;
+    background-attachment:local;
+    background-position: 400px -250px;
+    background-size: 1000px; */
+    
     position:absolute;
     width: 96%;
     height: 400px;
@@ -134,6 +152,7 @@ font-size: 10px;
     z-index: 0;
 }
 .carousel__item {
+    background-color: #fcfcfc;  
     opacity: 0.8;
     width: 230px;
     height: 450px;
